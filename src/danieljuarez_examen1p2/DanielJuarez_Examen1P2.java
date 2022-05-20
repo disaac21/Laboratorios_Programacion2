@@ -8,10 +8,18 @@ public class DanielJuarez_Examen1P2 {
 
     static Scanner lea = new Scanner(System.in);
     static ArrayList<Computadora> Computadoras = new ArrayList();
+    static ArrayList<Object> MaskCompu2 = new ArrayList();
+    static ArrayList<Object> IPCompu1 = new ArrayList();
+    static ArrayList<Object> IPCompu2 = new ArrayList();
 
     public static void main(String[] args) {
 
-        Computadoras.add(new Escritorio(16, 8, "SSD", true, "123.456.789.123", "123.789.456.123", "daniel"));
+        Computadora pc1 = new Escritorio(16, 8, "SSD", true, "192.14.65.86", "255.255.255.0", "daniel");
+        Computadoras.add(pc1);
+        
+        Computadora pc2 = new Escritorio(16, 8, "SSD", true, "192.14.64.128", "255.255.255.192", "compu2");
+        Computadoras.add(pc2);
+        
 
         int mainmenu = 1;
         while (mainmenu != 3) {
@@ -144,24 +152,68 @@ public class DanielJuarez_Examen1P2 {
                             System.out.println();
                         }
                         if (opcion.equals("ping")) {
-                            System.out.print("Ingrese el IP: ");
-                            String SentIP = lea.nextLine();
-
-                            for (int i = 0; i < Computadoras.size(); i++) {
-                                if (Computadoras.get(i).getIP().equals(SentIP)) {
-
-                                    StringTokenizer st = new StringTokenizer(Computadoras.get(i).getIP(), ".");
-                                    while (st.hasMoreElements()) {
-                                        Object nextElement = st.nextElement();
-                                        System.out.print(nextElement + "\n");
+                            if (Computadoras.size() <= 1) {
+                                System.out.println("Se Necesitan Por Lo Menos 2 Computadoras");
+                            } else {
+                                System.out.print("Ingrese el IP: ");
+                                String SentIP = lea.nextLine();
+                                boolean existe = false;
+                                for (int i = 0; i < Computadoras.size(); i++) {
+                                    String aux = Computadoras.get(i).getIP();
+                                    if (aux.equals(SentIP)) {
+                                        existe = true;
+                                        System.out.println();
+                                        
+                                        System.out.println("Separar Mascara PC2 Por Tokens");
+                                        
+                                        StringTokenizer maskpc2 = new StringTokenizer(Computadoras.get(i).getMask(), ".");
+                                        while (maskpc2.hasMoreElements()) {
+                                            Object nextElement = maskpc2.nextElement();
+                                            MaskCompu2.add(MaskCompu2.size(), nextElement);
+                                        }
+                                        for (int j = 0; j < MaskCompu2.size(); j++) {
+                                            System.out.print("["+ MaskCompu2.get(j) + "],");
+                                        }
+                                        
+                                        
+                                        
+                                        System.out.println();
+                                        System.out.println("Separar IP PC1 Por Tokens");
+                                        StringTokenizer ippc1 = new StringTokenizer(Computadoras.get(userchoose).getIP(), ".");
+                                        while (ippc1.hasMoreElements()) {
+                                            Object nextElement = ippc1.nextElement();
+                                            IPCompu1.add(IPCompu1.size(), nextElement);
+                                        }
+                                        for (int j = 0; j < IPCompu1.size(); j++) {
+                                            System.out.print("["+ IPCompu1.get(j) + "],");
+                                        }
+                                        
+                                        
+                                        
+                                        System.out.println();
+                                        System.out.println("Separar IP PC2 Por Tokens");
+                                        
+                                        StringTokenizer ippc2 = new StringTokenizer(Computadoras.get(i).getIP(), ".");
+                                        while (ippc2.hasMoreElements()) {
+                                            Object nextElement = ippc2.nextElement();
+                                            IPCompu2.add(IPCompu2.size(), nextElement);
+                                        }
+                                        for (int j = 0; j < IPCompu2.size(); j++) {
+                                            System.out.print("["+ IPCompu2.get(j) + "],");
+                                        }
+                                        
+                                        
+                                        
+                                        System.out.println();
                                     }
-
-                                } else {
-                                    System.out.println("La Computadora Requerida No Existe");
-                                    System.out.println();
-                                    break;
+                                }
+                                if(!existe){
+                                     
+                                        System.out.println("La Computadora Requerida No Existe");
+                                        System.out.println();
                                 }
                             }
+                            System.out.println();
                         }
                         System.out.print(Computadoras.get(userchoose).getHostname() + " # ");
                         opcion = lea.nextLine();
@@ -175,4 +227,28 @@ public class DanielJuarez_Examen1P2 {
             } // fin switch main menu
         } //fin while main menu
     } //fin main
+    
+    public String Dec2Bin(int numero) {
+        String binary = "";
+        String addceros = "[";
+        
+        while (numero > 0) {
+            if (numero % 2 == 0) {
+                binary = "0" + binary;
+            } else {
+                binary = "1" + binary;
+            }
+            numero = (int) numero / 2;
+        }
+        
+        if (binary.length() < 9){
+            int ceros = 8 - binary.length();
+            for (int i = 0; i < ceros; i++) {
+                addceros += "0";
+            }
+        }
+        binary = addceros + binary + "]";
+        return binary;
+    }
+    
 } //fin clase

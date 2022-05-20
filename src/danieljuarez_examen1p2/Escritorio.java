@@ -77,6 +77,6 @@ public class Escritorio extends Computadora {
 
     @Override
     public String toString() {
-        return "Escritorio{" + "RAM=" + RAM + ", Almacenamiento=" + Almacenamiento + ", TipoAlmacenamiento=" + TipoAlmacenamiento + ", TarGraf=" + TarGraf + '}';
+        return super.toString();
     }    
 }

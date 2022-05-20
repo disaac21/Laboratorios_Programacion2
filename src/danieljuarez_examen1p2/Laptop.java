@@ -67,6 +67,6 @@ public class Laptop extends Computadora {
 
     @Override
     public String toString() {
-        return "Laptop{" + "Marca=" + Marca + ", DefPantalla=" + DefPantalla + ", RGB=" + RGB + '}';
+        return super.toString();
     }    
 }

@@ -41,7 +41,9 @@ public class Computadora {
 
     @Override
     public String toString() {
-        return "Computadora{" + "IP=" + IP + ", Mask=" + Mask + ", Hostname=" + Hostname + '}';
+        return "Hostname: " + Hostname + "\n" +
+                "IP: " + IP + "\n" + 
+                "Mask: " + Mask + "\n";
     }
     
 }
