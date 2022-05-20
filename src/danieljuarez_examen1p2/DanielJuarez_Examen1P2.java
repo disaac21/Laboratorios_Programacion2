@@ -12,7 +12,7 @@ public class DanielJuarez_Examen1P2 {
 
         int mainmenu = 1;
         while (mainmenu != 3) {
-            System.out.println("\nMenú Principal");
+            System.out.println("Menú Principal");
             System.out.println("1) Agregar PC");
             System.out.println("2) Ingresar PC");
             System.out.println("3) Salir");
@@ -23,7 +23,7 @@ public class DanielJuarez_Examen1P2 {
                 case 1: {
                     int agregarpc = 1;
                     while (agregarpc != 5) {
-                        System.out.println("\nMenú Principal");
+                        System.out.println("\nMenú CRUD");
                         System.out.println("1) Agregar PC de Escritorio");
                         System.out.println("2) Agregar Laptop");
                         System.out.println("3) Eliminar Computadora");
@@ -36,6 +36,7 @@ public class DanielJuarez_Examen1P2 {
                             case 1: {
                                 System.out.println("--- Agregar PC de Escritorio ---");
                                 System.out.print("Ingresar IP: ");
+                                lea.nextLine();
                                 String IP = lea.nextLine();
                                 System.out.print("Ingresar Mask: ");
                                 String Mask = lea.nextLine();
@@ -46,7 +47,7 @@ public class DanielJuarez_Examen1P2 {
                                 int RAM = lea.nextInt();
                                 System.out.print("Ingrese el Almacenamiento: ");
                                 int Almacenamiento = lea.nextInt();
-                                System.out.print("Ingrese el Tipo de Almacenamiento:"
+                                System.out.print("Ingrese el Tipo de Almacenamiento\n"
                                         + "1) HDD :: 2) SSD");
                                 int ControlAlmacenamiento = lea.nextInt();
                                 boolean Almacen;
@@ -58,7 +59,7 @@ public class DanielJuarez_Examen1P2 {
                                     Almacen = false;
                                     TipoAlmacen = "SSD";
                                 }
-                                System.out.print("Ingrese Si Tiene Tarjeta Grafica:"
+                                System.out.print("Ingrese Si Tiene Tarjeta Grafica\n"
                                         + "1) Si :: 2) No");
                                 int ControlTarjeta = lea.nextInt();
                                 boolean Tarjeta;
@@ -73,6 +74,7 @@ public class DanielJuarez_Examen1P2 {
                             case 2: {
                                 System.out.println("--- Agregar Laptop ---");
                                 System.out.print("Ingresar IP: ");
+                                lea.nextLine();
                                 String IP = lea.nextLine();
                                 System.out.print("Ingresar Mask: ");
                                 String Mask = lea.nextLine();
@@ -125,11 +127,23 @@ public class DanielJuarez_Examen1P2 {
                     }
                     System.out.print("Ingrese el Indice de la Computadora a Usar: ");
                     int userchoose = lea.nextInt();
+                    System.out.println("\n------\n");
                     
                     System.out.println(Computadoras.get(userchoose).getHostname() + " # ");
                     String opcion = lea.nextLine();
                     
+                    if (opcion.equals("exit")) {
+                        System.out.println("exit aca");
+                    }
                     if (opcion.equals("show")) {
+                        System.out.println("IP: " + Computadoras.get(userchoose).getIP());
+                        System.out.println("Mask: " + Computadoras.get(userchoose).getMask());
+                    }
+                    if (opcion.equals("ping")) {
+                        System.out.print("Ingrese el IP: ");
+                        String SentIP = lea.nextLine();
+                        
+                        
                         
                     }
                     
