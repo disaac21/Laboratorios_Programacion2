@@ -165,45 +165,67 @@ public class DanielJuarez_Examen1P2 {
                                         System.out.println();
                                         
                                         System.out.println("Separar Mascara PC2 Por Tokens");
-                                        
                                         StringTokenizer maskpc2 = new StringTokenizer(Computadoras.get(i).getMask(), ".");
                                         while (maskpc2.hasMoreElements()) {
                                             Object nextElement = maskpc2.nextElement();
                                             MaskCompu2.add(MaskCompu2.size(), nextElement);
                                         }
+                                        String CadenaMaskCompu2 = "";
                                         for (int j = 0; j < MaskCompu2.size(); j++) {
-                                            System.out.print("["+ MaskCompu2.get(j) + "],");
+                                            int convert1 = Integer.parseInt((String)MaskCompu2.get(j));
+                                            String help = Dec2Bin(convert1);
+                                            MaskCompu2.set(j, help);
+                                            CadenaMaskCompu2 += MaskCompu2.get(j) + ".";
+//                                            System.out.print(MaskCompu2.get(j) + ".");
                                         }
+//                                        System.out.println("CadenaMaskCompu2");
+                                        System.out.println(CadenaMaskCompu2);
                                         
-                                        
-                                        
+                                        int cont1 = 0;
+                                        for (int j = 0; j < CadenaMaskCompu2.length(); j++) {
+                                            if (CadenaMaskCompu2.charAt(j) == '1') {
+                                                cont1++;
+                                            }
+                                        }
+                                        System.out.println("Contador de 1s: " + cont1);
                                         System.out.println();
+                                        
+                                        //---------------------------------------------------------------------------------------------
+                                        
                                         System.out.println("Separar IP PC1 Por Tokens");
                                         StringTokenizer ippc1 = new StringTokenizer(Computadoras.get(userchoose).getIP(), ".");
                                         while (ippc1.hasMoreElements()) {
                                             Object nextElement = ippc1.nextElement();
                                             IPCompu1.add(IPCompu1.size(), nextElement);
                                         }
+                                        String CadenaIPCompu1 = "";
                                         for (int j = 0; j < IPCompu1.size(); j++) {
-                                            System.out.print("["+ IPCompu1.get(j) + "],");
+                                            int convert2 = Integer.parseInt((String)IPCompu1.get(j));
+                                            String help = Dec2Bin(convert2);
+                                            IPCompu1.set(j, help);
+                                            CadenaIPCompu1 += IPCompu1.get(j) + ".";
+//                                            System.out.print(IPCompu1.get(j) + ".");
                                         }
-                                        
-                                        
-                                        
+                                        System.out.println(CadenaIPCompu1);
                                         System.out.println();
-                                        System.out.println("Separar IP PC2 Por Tokens");
                                         
+                                        //---------------------------------------------------------------------------------------------
+                                        
+                                        System.out.println("Separar IP PC2 Por Tokens");
                                         StringTokenizer ippc2 = new StringTokenizer(Computadoras.get(i).getIP(), ".");
                                         while (ippc2.hasMoreElements()) {
                                             Object nextElement = ippc2.nextElement();
                                             IPCompu2.add(IPCompu2.size(), nextElement);
                                         }
+                                        String CadenaIPCompu2 = "";
                                         for (int j = 0; j < IPCompu2.size(); j++) {
-                                            System.out.print("["+ IPCompu2.get(j) + "],");
+                                            int convert3 = Integer.parseInt((String)IPCompu2.get(j));
+                                            String help = Dec2Bin(convert3);
+                                            IPCompu2.set(j, help);
+                                            CadenaIPCompu2 += IPCompu2.get(j) + ".";
+//                                            System.out.print(IPCompu2.get(j) + ".");
                                         }
-                                        
-                                        
-                                        
+                                        System.out.println(CadenaIPCompu2);
                                         System.out.println();
                                     }
                                 }
@@ -213,7 +235,6 @@ public class DanielJuarez_Examen1P2 {
                                         System.out.println();
                                 }
                             }
-                            System.out.println();
                         }
                         System.out.print(Computadoras.get(userchoose).getHostname() + " # ");
                         opcion = lea.nextLine();
@@ -228,9 +249,9 @@ public class DanielJuarez_Examen1P2 {
         } //fin while main menu
     } //fin main
     
-    public String Dec2Bin(int numero) {
+    public static String Dec2Bin(int numero) {
         String binary = "";
-        String addceros = "[";
+        String addceros = "";
         
         while (numero > 0) {
             if (numero % 2 == 0) {
@@ -247,7 +268,7 @@ public class DanielJuarez_Examen1P2 {
                 addceros += "0";
             }
         }
-        binary = addceros + binary + "]";
+        binary = addceros + binary + "";
         return binary;
     }
     
