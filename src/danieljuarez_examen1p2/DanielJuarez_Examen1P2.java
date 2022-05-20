@@ -85,8 +85,7 @@ public class DanielJuarez_Examen1P2 {
                                 String Marca = lea.nextLine();
                                 System.out.print("Ingresar Definición de Pantalla: ");
                                 String DefPantalla = lea.nextLine();
-                                System.out.print("Ingresar Si Tiene RGB: ");
-                                System.out.print("Ingrese Si Tiene RGB:"
+                                System.out.print("Ingrese Si Tiene RGB\n"
                                         + "1) Si :: 2) No");
                                 int ControlBoolean = lea.nextInt();
                                 boolean Boolean;
@@ -128,10 +127,10 @@ public class DanielJuarez_Examen1P2 {
                     System.out.print("Ingrese el Indice de la Computadora a Usar: ");
                     int userchoose = lea.nextInt();
                     System.out.println("\n------\n");
-                    
+
                     System.out.println(Computadoras.get(userchoose).getHostname() + " # ");
                     String opcion = lea.nextLine();
-                    
+
                     if (opcion.equals("exit")) {
                         System.out.println("exit aca");
                     }
@@ -142,13 +141,18 @@ public class DanielJuarez_Examen1P2 {
                     if (opcion.equals("ping")) {
                         System.out.print("Ingrese el IP: ");
                         String SentIP = lea.nextLine();
-                        
-                        
-                        
+
+                        for (int i = 0; i < Computadoras.size(); i++) {
+                            if (Computadoras.get(i).getIP().equals(SentIP)) {
+
+                            } else {
+                                System.out.println("La Computadora Requerida No Existe");
+                            }
+                        }
                     }
-                    
-                }
-            }
-        }
-    }
-}
+                } //fin Case 2 Ingresar PC
+                break;
+            } // fin switch main menu
+        } //fin while main menu
+    } //fin main
+} //fin clase
