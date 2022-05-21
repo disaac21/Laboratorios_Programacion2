@@ -22,6 +22,8 @@ public class DanielJuarez_Examen1P2 {
 
         Computadora pc3 = new Laptop("Lenovo", "24x15", true, "192.14.65.125", "255.255.255.192", "tercero");
         Computadoras.add(pc3);
+        
+        
 
         int mainmenu = 1;
         while (mainmenu != 3) {
