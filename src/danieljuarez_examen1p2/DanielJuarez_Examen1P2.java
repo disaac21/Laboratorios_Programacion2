@@ -144,7 +144,7 @@ public class DanielJuarez_Examen1P2 {
                     lea.nextLine();
 
                     System.out.println();
-                    System.out.print(Computadoras.get(userchoose).getHostname() + "# ");
+                    System.out.print(Computadoras.get(userchoose).getHostname() + "#");
                     String opcion = lea.nextLine();
 
                     while (!opcion.equals("exit")) {
@@ -261,36 +261,42 @@ public class DanielJuarez_Examen1P2 {
                                             }
                                         }
                                         if (hayDiferencia) {
-                                            System.out.println(Computadoras.get(userchoose).getHostname() + " # " + SentIP + "\n\n"
+                                            System.out.println(Computadoras.get(userchoose).getHostname() + "#" + SentIP + "\n\n"
                                                     + "Pinging to " + SentIP + "with 32 bytes of data: \n"
                                                     + "Reply from " + SentIP + ": Destination host unreachable\n"
                                                     + "Reply from " + SentIP + ": Destination host unreachable\n"
                                                     + "Reply from " + SentIP + ": Destination host unreachable\n"
                                                     + "Reply from " + SentIP + ": Destination host unreachable\n\n"
                                                     + "Ping statistics for " + SentIP + ":\n"
-                                                    + "\tPackets: Sent = 4, Recieved = 4, Lost = 0 (0% loss)\n\n");
+                                                    + "\tPackets: Sent = 4, Recieved = 4, Lost = 0 (0% loss)\n");
                                             System.out.println();
                                         } else {
-                                            System.out.println(Computadoras.get(userchoose).getHostname() + " # " + SentIP + "\n\n"
+                                            System.out.println(Computadoras.get(userchoose).getHostname() + "#" + SentIP + "\n\n"
                                                     + "Pinging to " + SentIP + "with 32 bytes of data: \n"
                                                     + "Reply from " + SentIP + ": bytes=32 time 37ms TTL=46\n"
                                                     + "Reply from " + SentIP + ": bytes=32 time 37ms TTL=46\n"
                                                     + "Reply from " + SentIP + ": bytes=32 time 37ms TTL=46\n"
                                                     + "Reply from " + SentIP + ": bytes=32 time 37ms TTL=46\n\n"
                                                     + "Ping statistics for " + SentIP + ":\n"
-                                                    + "\tPackets: Sent = 4, Recieved = 4, Lost = 0 (0% loss)\n\n");
+                                                    + "\tPackets: Sent = 4, Recieved = 4, Lost = 0 (0% loss)\n");
                                             System.out.println();
                                         }
                                     }
                                 }
                                 if (!existe) {
-
-                                    System.out.println("La Computadora Requerida No Existe");
+                                    System.out.println(Computadoras.get(userchoose).getHostname() + "#" + SentIP + "\n\n"
+                                            + "Pinging to " + SentIP + "with 32 bytes of data: \n"
+                                            + "Request timed out\n"
+                                            + "Request timed out\n"
+                                            + "Request timed out\n"
+                                            + "Request timed out\n\n"
+                                            + "Ping statistics for " + SentIP + ":\n"
+                                            + "\tPackets: Sent = 4, Recieved = 0, Lost = 4 (100% loss)\n");
                                     System.out.println();
                                 }
                             }
                         }
-                        System.out.print(Computadoras.get(userchoose).getHostname() + "# ");
+                        System.out.print(Computadoras.get(userchoose).getHostname() + "#");
                         opcion = lea.nextLine();
                     }
                     if (opcion.equals("exit")) {
