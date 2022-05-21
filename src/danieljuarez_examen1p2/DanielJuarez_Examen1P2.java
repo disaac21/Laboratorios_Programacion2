@@ -23,6 +23,12 @@ public class DanielJuarez_Examen1P2 {
         Computadora pc3 = new Laptop("Lenovo", "24x15", true, "192.14.65.125", "255.255.255.192", "tercero");
         Computadoras.add(pc3);
         
+        Computadora pc4 = new Escritorio(16, 8, "SSD", true, "192.115.45.3", "255.255.255.0", "enuila");
+        Computadoras.add(pc4);
+        
+        Computadora pc5 = new Laptop("HP", "24x15", true, "192.115.45.144", "255.255.255.254", "saejemplo");
+        Computadoras.add(pc5);
+        
         
 
         int mainmenu = 1;
