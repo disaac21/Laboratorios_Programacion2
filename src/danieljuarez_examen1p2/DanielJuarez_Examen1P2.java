@@ -144,7 +144,7 @@ public class DanielJuarez_Examen1P2 {
                     lea.nextLine();
 
                     System.out.println();
-                    System.out.print(Computadoras.get(userchoose).getHostname() + " # ");
+                    System.out.print(Computadoras.get(userchoose).getHostname() + "# ");
                     String opcion = lea.nextLine();
 
                     while (!opcion.equals("exit")) {
@@ -179,7 +179,7 @@ public class DanielJuarez_Examen1P2 {
                                     if (aux.equals(SentIP)) {
                                         existe = true;
                                         System.out.println();
-                                        
+
 //                                        System.out.println("Separar Mascara PC2 Por Tokens");
                                         StringTokenizer maskpc1 = new StringTokenizer(Computadoras.get(userchoose).getMask(), ".");
                                         while (maskpc1.hasMoreElements()) {
@@ -261,8 +261,15 @@ public class DanielJuarez_Examen1P2 {
                                             }
                                         }
                                         if (hayDiferencia) {
-                                            System.out.println("no es misma red");
-                                            System.out.println("---------------------\n");
+                                            System.out.println(Computadoras.get(userchoose).getHostname() + " # " + SentIP + "\n\n"
+                                                    + "Pinging to " + SentIP + "with 32 bytes of data: \n"
+                                                    + "Reply from " + SentIP + ": Destination host unreachable\n"
+                                                    + "Reply from " + SentIP + ": Destination host unreachable\n"
+                                                    + "Reply from " + SentIP + ": Destination host unreachable\n"
+                                                    + "Reply from " + SentIP + ": Destination host unreachable\n\n"
+                                                    + "Ping statistics for " + SentIP + ":\n"
+                                                    + "\tPackets: Sent = 4, Recieved = 4, Lost = 0 (0% loss)\n\n");
+                                            System.out.println();
                                         } else {
                                             System.out.println(Computadoras.get(userchoose).getHostname() + " # " + SentIP + "\n\n"
                                                     + "Pinging to " + SentIP + "with 32 bytes of data: \n"
@@ -271,9 +278,8 @@ public class DanielJuarez_Examen1P2 {
                                                     + "Reply from " + SentIP + ": bytes=32 time 37ms TTL=46\n"
                                                     + "Reply from " + SentIP + ": bytes=32 time 37ms TTL=46\n\n"
                                                     + "Ping statistics for " + SentIP + ":\n"
-                                                    + "\tPackets: Sent = 4, Recieved = 4, Lost = 0 (0% loss)"
-                                                    + "Computadoras.get(userchoose).getHostname() + \" #");
-                                            System.out.println("---------------------\n");
+                                                    + "\tPackets: Sent = 4, Recieved = 4, Lost = 0 (0% loss)\n\n");
+                                            System.out.println();
                                         }
                                     }
                                 }
@@ -284,7 +290,7 @@ public class DanielJuarez_Examen1P2 {
                                 }
                             }
                         }
-                        System.out.print(Computadoras.get(userchoose).getHostname() + " # ");
+                        System.out.print(Computadoras.get(userchoose).getHostname() + "# ");
                         opcion = lea.nextLine();
                     }
                     if (opcion.equals("exit")) {
