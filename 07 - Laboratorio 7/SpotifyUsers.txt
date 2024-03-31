@@ -1,0 +1,40 @@
+djuarez;Regular;Fri Jun 03 15:36:37 CST 2022
+messi;Artista;Fri Jun 03 15:37:14 CST 2022
+messi;Artista;Fri Jun 03 16:51:30 CST 2022
+messi;Artista;Fri Jun 03 16:54:09 CST 2022
+messi;Artista;Fri Jun 03 16:57:16 CST 2022
+messi;Artista;Fri Jun 03 17:34:19 CST 2022
+messi;Artista;Fri Jun 03 17:35:29 CST 2022
+messi;Artista;Fri Jun 03 17:36:54 CST 2022
+messi;Artista;Fri Jun 03 17:38:03 CST 2022
+messi;Artista;Fri Jun 03 17:39:48 CST 2022
+messi;Artista;Fri Jun 03 17:42:46 CST 2022
+messi;Artista;Fri Jun 03 17:46:58 CST 2022
+messi;Artista;Fri Jun 03 17:49:33 CST 2022
+messi;Artista;Fri Jun 03 17:50:36 CST 2022
+messi;Artista;Fri Jun 03 17:57:24 CST 2022
+messi;Artista;Fri Jun 03 18:20:03 CST 2022
+messi;Artista;Fri Jun 03 18:22:37 CST 2022
+messi;Artista;Fri Jun 03 18:27:34 CST 2022
+messi;Artista;Fri Jun 03 18:32:14 CST 2022
+messi;Artista;Fri Jun 03 18:45:24 CST 2022
+messi;Regular;Fri Jun 03 18:50:38 CST 2022
+messi;Artista;Fri Jun 03 18:59:28 CST 2022
+cr7;Regular;Fri Jun 03 19:00:29 CST 2022
+messi;Regular;Fri Jun 03 19:11:51 CST 2022
+
+messi;Regular;Fri Jun 03 19:20:41 CST 2022
+messi;Artista;Fri Jun 03 19:32:47 CST 2022
+daniel;Regular;Fri Jun 03 19:34:01 CST 2022
+messi;Artista;Fri Jun 03 19:45:40 CST 2022
+daniel;Regular;Fri Jun 03 19:45:54 CST 2022
+messi;Artista;Fri Jun 03 19:47:14 CST 2022
+daniel;Regular;Fri Jun 03 19:47:22 CST 2022
+messi;Artista;Fri Jun 03 19:48:52 CST 2022
+daniel;Regular;Fri Jun 03 19:49:00 CST 2022
+daniel;Artista;Fri Jun 03 19:49:47 CST 2022
+messi;Regular;Fri Jun 03 19:49:57 CST 2022
+
+
+
+wer;Regular;Sat Jun 18 10:33:08 CST 2022
